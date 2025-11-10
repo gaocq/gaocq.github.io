@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Publications & Systems - Chenqiang Gao</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Header + Nav -->
+<header class="site-header">
+  <div class="container nav-row">
+    
+    <div class="site-identity">
+      <a class="brand" href="index.html">Chenqiang Gao</a>
+      
+      <div class="brand-sub">Professor, Sun Yat-sen University (Shenzhen Campus).</div>
+      
+      <div class="links-inline">
+        <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="https://github.com/gaocq" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:gaochq6@mail.sysu.edu.cn">gaochq6@mail.sysu.edu.cn</a>
+      </div>
+    </div>
+    
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+
+<div class="main-content">
+  <!-- Filter buttons row -->
+  <!-- <div class="pub-top-links" id="filter-bar">
+    <button data-filter="all">All Publications by Year</button>
+    <button data-filter="multimodal">Multimodal Perception</button>
+    <button data-filter="video">Video Understanding</button>
+    <button data-filter="3d">3D / Point-Cloud</button>
+    <button data-filter="medical">Medical / Industrial Vision</button>
+    <button data-filter="embodied">Embodied Intelligence</button>
+  </div> -->
+
+  <div class="pub-section-title">Publications &amp; Systems</div>
+  <div class="pub-intro-blurb">
+  This page includes peer-reviewed publications (CVPR / ECCV / NeurIPS / TMI / TIP, etc.),
+  and also real deployed systems or algorithms we built for production environments
+  (e.g., classroom behavior analytics in actual schools, low-light multimodal perception in the field),
+  even if they are not yet in a formal paper.
+  </div>
+
+
+  <!-- Publications Container -->
+  <div id="publications-container">
+
+  <!-- 2025 Publications -->
+  <div class="pub-entry" data-tags="medical" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/PNL_jiepengyu2024.jpg" alt="Point-Neighborhood Learning">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        A Point-Neighborhood Learning Framework for Nasal Endoscope Image Segmentation
+      </p>
+
+      <p class="pub-authors">
+        Pengyu Jie, Wanquan Liu, <u>Chenqiang Gao</u>*, Yihui Wen, Rui He, Pengcheng Li, Jintao Zhang, Deyu Meng
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2025
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/document/11030662" target="_blank" rel="noopener noreferrer">[paper]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="video" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/Towards Student Actions-Zhuolin Tan.png" alt="Student Actions">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Towards Student Actions in Classroom Scenes: New Dataset and Baseline
+      </p>
+
+      <p class="pub-authors">
+        Zhuolin Tan, <u>Chenqiang Gao</u>*, Anyong Qin*, Ruixin Chen, Tiecheng Song, Feng Yang, Deyu Meng
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Multimedia (TMM), 2025
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/document/11086400" target="_blank" rel="noopener noreferrer">[paper]</a>
+        <a href="https://github.com/Ritatanz/SAV" target="_blank" rel="noopener noreferrer">[code & dataset]</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 2024 Publications -->
+  <div class="pub-entry" data-tags="3d-robotics" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/NeurIPS2024-GuassianHand.png" alt="GuassianHand">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        GuassianHand: Learning Interaction-aware 3D Gaussian Splatting for One-shot Hand Avatars
+      </p>
+
+      <p class="pub-authors">
+        Xuan Huang, Hanhui Li, Wanquan Liu, Xiaodan Liang, Yiqiang Yan, Yuhao Cheng, <u>Chenqiang Gao</u>
+      </p>
+
+      <p class="pub-venue">
+        Neural Information Processing Systems (NeurIPS), 2024
+      </p>
+
+      <p class="pub-links">
+        <a href="https://arxiv.org/pdf/2410.08840" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+        <a href="https://github.com/XuanHuang0/GuassianHand" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="multimodal" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/ECCV2024-InfMAE.jpg" alt="InfMAE">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Infmae: A foundation model in infrared modality
+      </p>
+
+      <p class="pub-authors">
+        Fangcen Liu, <u>Chenqiang Gao</u>*, Yaming Zhang, Junjie Guo, Jinhao Wang, Deyu Meng
+      </p>
+
+      <p class="pub-venue">
+        European Conference on Computer Vision (ECCV), 2024
+      </p>
+
+      <p class="pub-links">
+        <a href="https://arxiv.org/pdf/2402.00407" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+        <a href="https://github.com/liufangcen/InfMAE" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="multimodal" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/ECCV2024-DAMSDet.bmp" alt="DAMSDet">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        DAMSDet: Dynamic Adaptive Multispectral Detection Transformer with Competitive Query Selection and Adaptive Feature Fusion
+      </p>
+
+      <p class="pub-authors">
+        Junjie Guo, <u>Chenqiang Gao</u>*, Fangcen Liu, Deyu Meng, Xinbo Gao
+      </p>
+
+      <p class="pub-venue">
+        European Conference on Computer Vision (ECCV), 2024
+      </p>
+
+      <p class="pub-links">
+        <a href="https://arxiv.org/pdf/2403.00326" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+        <a href="https://github.com/gjj45/DAMSDet" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="medical" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/TMI2024-SPGTNet.gif" alt="SPGTNet">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Spatial Prior-Guided Tooth Instance Segmentation with Bi-Directional Cross Attention Transformers
+      </p>
+
+      <p class="pub-authors">
+        Pengcheng Li, <u>Chenqiang Gao</u>*, Chunfeng Lian, Deyu Meng
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Medical Imaging (TMI), 2024
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/document/10539992" target="_blank" rel="noopener noreferrer">[paper]</a>
+        <a href="https://github.com/li-pengcheng/SPGTNet" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="remote-sensing" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/Few-Shot Learning-Qinan Yong.png" alt="Few-Shot Learning">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Few-Shot Learning with Prototype Rectification for Cross-Domain Hyperspectral Image Classification
+      </p>
+
+      <p class="pub-authors">
+        Anyong Qin, Chaoqi Yuan, Qiang Li, Xiaoliu Luo, Feng Yang, Tiecheng Song, <u>Chenqiang Gao</u>
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Geoscience and Remote Sensing (TGRS), 2024
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/10557640" target="_blank" rel="noopener noreferrer">[paper]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="remote-sensing" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/Exploring Hybrid-Tiecheng Song.png" alt="Hybrid Contrastive">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Exploring Hybrid Contrastive Learning and Scene-to-Label Information for Multilabel Remote Sensing Image Classification
+      </p>
+
+      <p class="pub-authors">
+        Tiecheng Song, Shufen Bai, Feng Yang, <u>Chenqiang Gao</u>, Haonan Chen, Jun Li
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Geoscience and Remote Sensing (TGRS), 2024
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/10580951" target="_blank" rel="noopener noreferrer">[paper]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="remote-sensing" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/Height Information Guided-Tiechen Song.png" alt="Height Information">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Joint Classification of Hyperspectral and LiDAR Data Using Height Information Guided Hierarchical Fusion-and-Separation Network
+      </p>
+
+      <p class="pub-authors">
+        Tiecheng Song, Zheng Zeng, <u>Chenqiang Gao</u>, Haonan Chen, Jun Li
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Geoscience and Remote Sensing (TGRS), 2024
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/10399896" target="_blank" rel="noopener noreferrer">[paper]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="remote-sensing" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/FSRSSC-Anyong Qing.png" alt="FSRSSC">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Deep Updated Subspace Networks for Few-Shot Remote Sensing Scene Classification
+      </p>
+
+      <p class="pub-authors">
+        Anyong Qin, Fuyang Chen, Qiang Li, Lingyun Tang, Feng Yang, Yue Zhao, <u>Chenqiang Gao</u>
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Geoscience and Remote Sensing (TGRS), 2024
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/10409235" target="_blank" rel="noopener noreferrer">[paper]</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 2023 Publications -->
+  <div class="pub-entry" data-tags="3d-robotics" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/CVPR2023-HSSDA.png" alt="HSSDA">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Hierarchical Supervision and Shuffle Data Augmentation for 3D Semi-Supervised Object Detection
+      </p>
+
+      <p class="pub-authors">
+        Chuandong Liu, <u>Chenqiang Gao</u>*, Fangcen Liu, Pengcheng Li, Deyu Meng, Xinbo Gao
+      </p>
+
+      <p class="pub-venue">
+        IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023
+      </p>
+
+      <p class="pub-links">
+        <a href="https://arxiv.org/abs/2304.01464" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+        <a href="https://github.com/azhuantou/HSSDA" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="medical" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/TCSVT2023-THISNet.gif" alt="THISNet">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        THISNet: Tooth Instance Segmentation on 3D Dental Models via Highlighting Tooth Regions
+      </p>
+
+      <p class="pub-authors">
+        Pengcheng Li, <u>Chenqiang Gao</u>*, Fangcen Liu, Deyu Meng, Yan Yan
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2023
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/document/10353988" target="_blank" rel="noopener noreferrer">[paper]</a>
+        <a href="https://github.com/li-pengcheng/ThisNet-TootH-Instance-Segmentation" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="remote-sensing" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/DGAN-Anyong Qin.png" alt="DGAN">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Distance constraint-based generative adversarial networks for hyperspectral image classification
+      </p>
+
+      <p class="pub-authors">
+        Anyong Qin, Zhuolin Tan, Ran Wang, Yongqing Sun, Feng Yang, Yue Zhao, <u>Chenqiang Gao</u>
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Geoscience and Remote Sensing (TGRS), 2023
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/10122686" target="_blank" rel="noopener noreferrer">[paper]</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 2022 Publications -->
+  <div class="pub-entry" data-tags="3d-robotics" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/CVPR2022-SS3D.png" alt="SS3D">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        SS3D: Sparsely-Supervised 3D Object Detection from Point Cloud
+      </p>
+
+      <p class="pub-authors">
+        Chuandong Liu, <u>Chenqiang Gao</u>*, Fangcen Liu, Jiang Liu, Deyu Meng, Xinbo Gao
+      </p>
+
+      <p class="pub-venue">
+        IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022
+      </p>
+
+      <p class="pub-links">
+        <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Liu_SS3D_Sparsely-Supervised_3D_Object_Detection_From_Point_Cloud_CVPR_2022_paper.pdf" target="_blank" rel="noopener noreferrer">[paper]</a>
+        <a href="https://github.com/gaocq/SS3D2" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="medical" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/TMI2022-SGANet.gif" alt="SGANet">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Semantic Graph Attention With Explicit Anatomical Association Modeling for Tooth Segmentation From CBCT Images
+      </p>
+
+      <p class="pub-authors">
+        Pengcheng Li, Yang Liu, Zhiming Cui, Feng Yang, Yue Zhao, Chunfeng Lian, <u>Chenqiang Gao</u>
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Medical Imaging (TMI), 2022
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/document/9785606" target="_blank" rel="noopener noreferrer">[paper]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="multimodal" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/Local-Patch-Network-with-Global-Attention-Chen Fang.png" alt="Local Patch Network">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Local patch network with global attention for infrared small target detection
+      </p>
+
+      <p class="pub-authors">
+        Fang Chen, <u>Chenqiang Gao</u>, Fangcen Liu, Yue Zhao, Yuxi Zhou, Deyu Meng, Wangmeng Zuo
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Aerospace and Electronic Systems (TAES), 2022
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/9735292" target="_blank" rel="noopener noreferrer">[paper]</a>
+        <a href="https://github.com/gaocq/Local-Patch-Network-with-Global-Attention" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="remote-sensing" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/PRDet-Jiaxu Leng.png" alt="PRDet">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Pareto refocusing for drone-view object detection
+      </p>
+
+      <p class="pub-authors">
+        Jiaxu Leng, Mengjingcheng Mo, Yinghua Zhou, <u>Chenqiang Gao</u>, Weisheng Li, Xinbo Gao
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2022
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/9905640" target="_blank" rel="noopener noreferrer">[paper]</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 2021 Publications -->
+  <div class="pub-entry" data-tags="medical" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/TSGCNet-Ling Ming Zhang.png" alt="TSGCNet">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Tsgcnet: Discriminative geometric feature learning with two-stream graph convolutional network for 3d dental model segmentation
+      </p>
+
+      <p class="pub-authors">
+        Lingming Zhang, Yue Zhao, Deyu Meng, Zhiming Cui, <u>Chenqiang Gao</u>, Xinbo Gao, Chunfeng Lian, Dinggang Shen
+      </p>
+
+      <p class="pub-venue">
+        IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021
+      </p>
+
+      <p class="pub-links">
+        <a href="https://arxiv.org/abs/2012.13697" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+        <a href="https://github.com/ZhangLingMing1/TSGCNet" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="medical" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/TSGCNet-Yue Zhao.png" alt="Two-stream Graph">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Two-stream graph convolutional network for intra-oral scanner image segmentation
+      </p>
+
+      <p class="pub-authors">
+        Yue Zhao, Lingming Zhang, Yang Liu, Deyu Meng, Zhiming Cui, <u>Chenqiang Gao</u>, Xinbo Gao, Chunfeng Lian, Dinggang Shen
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Medical Imaging (TMI), 2021
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/9594785" target="_blank" rel="noopener noreferrer">[paper]</a>
+        <a href="https://github.com/ZhangLingMing1/TSGCNet" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="multimodal" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/InfDetNetXChen.png" alt="InfDetNet">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Infrared action detection in the dark via cross-stream attention mechanism
+      </p>
+
+      <p class="pub-authors">
+        Xu Chen, <u>Chenqiang Gao</u>, Chaoyu Li, Yi Yang, Deyu Meng
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Multimedia (TMM), 2021
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/9316950" target="_blank" rel="noopener noreferrer">[paper]</a>
+        <a href="https://github.com/LannCX/InfDetNet" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="video" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/Video-to-Image-Xu Chen.png" alt="Video to Image">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Video-to-Image casting: A flatting method for video analysis
+      </p>
+
+      <p class="pub-authors">
+        Xu Chen, <u>Chenqiang Gao</u>, Feng Yang, Xiaohan Wang, Yi Yang, Yahong Han
+      </p>
+
+      <p class="pub-venue">
+        ACM International Conference on Multimedia (ACM MM, Oral), 2021
+      </p>
+
+      <p class="pub-links">
+        <a href="https://dl.acm.org/doi/abs/10.1145/3474085.3475424" target="_blank" rel="noopener noreferrer">[paper]</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 2020 Publications -->
+  <div class="pub-entry" data-tags="medical" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/LGONBP-stc.png" alt="LGONBP">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Robust texture description using local grouped order pattern and non-local binary pattern
+      </p>
+
+      <p class="pub-authors">
+        Tiecheng Song, Jie Feng, Lin Luo, <u>Chenqiang Gao</u>, Hongliang Li
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2020
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/8985286" target="_blank" rel="noopener noreferrer">[paper]</a>
+        <a href="https://github.com/stc-cqupt/LGONBP" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 2019 Publications -->
+  <div class="pub-entry" data-tags="multimodal" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/InfraredTargetDectectionFKRW-Yao Qin.png" alt="FKRW">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Infrared small target detection based on facet kernel and random walker
+      </p>
+
+      <p class="pub-authors">
+        Yao Qin, Lorenzo Bruzzone, <u>Chengqiang Gao</u>, Biao Li
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Geoscience and Remote Sensing (TGRS), 2019
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/8705367" target="_blank" rel="noopener noreferrer">[paper]</a>
+        <a href="https://github.com/tsinjiao/InfraredTargetDectectionFKRW" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 2018 Publications -->
+  <div class="pub-entry" data-tags="video" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/DecideNet-Jiang Liu.png" alt="DecideNet">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Decidenet: Counting varying density crowds through attention guided detection and density estimation
+      </p>
+
+      <p class="pub-authors">
+        Jiang Liu, <u>Chenqiang Gao</u>, Deyu Meng, Alexander G Hauptmann
+      </p>
+
+      <p class="pub-venue">
+        IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2018
+      </p>
+
+      <p class="pub-links">
+        <a href="https://openaccess.thecvf.com/content_cvpr_2018/html/Liu_DecideNet_Counting_Varying_CVPR_2018_paper.html">[paper]</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-entry" data-tags="video" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/PM-GANs-Wang Lan.png" alt="PM-GANs">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Pm-gans: Discriminative representation learning for action recognition using partial-modalities
+      </p>
+
+      <p class="pub-authors">
+        Lan Wang, <u>Chenqiang Gao</u>, Luyu Yang, Yue Zhao, Wangmeng Zuo, Deyu Meng
+      </p>
+
+      <p class="pub-venue">
+        European Conference on Computer Vision (ECCV), 2018
+      </p>
+
+      <p class="pub-links">
+        <a href="https://openaccess.thecvf.com/content_ECCV_2018/html/Lan_Wang_PM-GANs_Discriminative_Representation_ECCV_2018_paper.html">[paper]</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 2013 Publications -->
+  <div class="pub-entry" data-tags="multimodal" data-selected="true">
+    <div class="pub-left">
+      <img class="pub-thumb" src="imgs/pubs/IPI-for-small-target-detection.png" alt="IPI">
+    </div>
+    <div class="pub-right">
+      <p class="pub-title">
+        Infrared Patch-image Model for Small Target Detection in A Single Image
+      </p>
+
+      <p class="pub-authors">
+        <u>Chenqiang Gao</u>, Deyu Meng, Yi Yang, Yongtao Wang, Xiaofang Zhou, Alexander G. Hauptmann
+      </p>
+
+      <p class="pub-venue">
+        IEEE Transactions on Image Processing (TIP), 2013
+      </p>
+
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/6595533" target="_blank" rel="noopener noreferrer">[paper]</a>
+        <a href="https://github.com/gaocq/IPI-for-small-target-detection" target="_blank" rel="noopener noreferrer">[code]</a>
+      </p>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<script>
+// 筛选功能
+//function initializeFilters() {
+//  const buttons = document.querySelectorAll('#filter-bar button');
+//  const entries = document.querySelectorAll('.pub-entry');
+//  const title = document.querySelector('.pub-section-title');
+//
+//  // 定义不同筛选条件对应的标题
+//  const titleMap = {
+//    'selected': 'Selected Publications & Systems',
+//    'all': 'Selected Publications & Systems',
+//    'multimodal': 'Multimodal Perception Publications',
+//    'video': 'Video Understanding Publications',
+//    '3d': '3D / Point-Cloud Publications',
+//    'medical': 'Medical / Industrial Vision Publications',
+//    'embodied': 'Embodied Intelligence Publications'
+//  };
+//
+//  function applyFilter(filterType) {
+//    // 更新标题
+//    if (titleMap[filterType]) {
+//      title.textContent = titleMap[filterType];
+//    }
+//
+//    // 筛选条目
+//    entries.forEach(entry => {
+//      const tags = entry.getAttribute('data-tags') || '';
+//      const isSelected = entry.getAttribute('data-selected') === 'true';
+//      
+//      if (filterType === 'all') {
+//        entry.classList.remove('hidden');
+//      } else if (filterType === 'selected') {
+//        if (isSelected) {
+//          entry.classList.remove('hidden');
+//        } else {
+//          entry.classList.add('hidden');
+//        }
+//      } else {
+//        // 按标签筛选
+//        if (tags.includes(filterType)) {
+//          entry.classList.remove('hidden');
+//        } else {
+//          entry.classList.add('hidden');
+//        }
+//      }
+//    });
+//  }
+//
+//  buttons.forEach(btn => {
+//    btn.addEventListener('click', () => {
+//      buttons.forEach(b => b.classList.remove('active'));
+//      btn.classList.add('active');
+//
+//      const filterType = btn.getAttribute('data-filter');
+//      applyFilter(filterType);
+//    });
+//  });
+//
+//  // 默认显示 selected
+//  applyFilter('selected');
+//}
+
+// 页面加载时执行
+document.addEventListener('DOMContentLoaded', initializeFilters);
+</script>
+
+</body>
+</html>
