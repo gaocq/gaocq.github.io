@@ -47,12 +47,9 @@
     <button data-filter="embodied">Embodied Intelligence</button>
   </div> -->
 
-  <div class="pub-section-title">Publications &amp; Systems</div>
+  <div class="pub-section-title">Selected Publications &amp; Systems</div>
   <div class="pub-intro-blurb">
-  This page includes peer-reviewed publications (CVPR / ECCV / NeurIPS / TMI / TIP, etc.),
-  and also real deployed systems or algorithms we built for production environments
-  (e.g., classroom behavior analytics in actual schools, low-light multimodal perception in the field),
-  even if they are not yet in a formal paper.
+  This page includes peer-reviewed publications (CVPR / ECCV / NeurIPS / TMI / TIP, etc.), and also real deployed systems or algorithms we built for production environments, even if they are not yet in a formal paper.
   </div>
 
 
@@ -685,70 +682,11 @@
 </div>
 
 <script>
-// 筛选功能
-//function initializeFilters() {
-//  const buttons = document.querySelectorAll('#filter-bar button');
-//  const entries = document.querySelectorAll('.pub-entry');
-//  const title = document.querySelector('.pub-section-title');
-//
-//  // 定义不同筛选条件对应的标题
-//  const titleMap = {
-//    'selected': 'Selected Publications & Systems',
-//    'all': 'Selected Publications & Systems',
-//    'multimodal': 'Multimodal Perception Publications',
-//    'video': 'Video Understanding Publications',
-//    '3d': '3D / Point-Cloud Publications',
-//    'medical': 'Medical / Industrial Vision Publications',
-//    'embodied': 'Embodied Intelligence Publications'
-//  };
-//
-//  function applyFilter(filterType) {
-//    // 更新标题
-//    if (titleMap[filterType]) {
-//      title.textContent = titleMap[filterType];
-//    }
-//
-//    // 筛选条目
-//    entries.forEach(entry => {
-//      const tags = entry.getAttribute('data-tags') || '';
-//      const isSelected = entry.getAttribute('data-selected') === 'true';
-//      
-//      if (filterType === 'all') {
-//        entry.classList.remove('hidden');
-//      } else if (filterType === 'selected') {
-//        if (isSelected) {
-//          entry.classList.remove('hidden');
-//        } else {
-//          entry.classList.add('hidden');
-//        }
-//      } else {
-//        // 按标签筛选
-//        if (tags.includes(filterType)) {
-//          entry.classList.remove('hidden');
-//        } else {
-//          entry.classList.add('hidden');
-//        }
-//      }
-//    });
-//  }
-//
-//  buttons.forEach(btn => {
-//    btn.addEventListener('click', () => {
-//      buttons.forEach(b => b.classList.remove('active'));
-//      btn.classList.add('active');
-//
-//      const filterType = btn.getAttribute('data-filter');
-//      applyFilter(filterType);
-//    });
-//  });
-//
-//  // 默认显示 selected
-//  applyFilter('selected');
-//}
 
 // 页面加载时执行
 document.addEventListener('DOMContentLoaded', initializeFilters);
 </script>
 
 </body>
+
 </html>
