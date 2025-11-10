@@ -1,0 +1,640 @@
+/* ========== Global layout ========== */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  /* REMOVE: max-width: 1200px; */
+  /* REMOVE: margin: 0 auto; */
+  /* REMOVE: padding: 24px 16px 80px 16px; */
+  margin: 0;  /* ADD this */
+  padding: 0; /* ADD this */
+  line-height: 1.6;
+  color: #1a1a1a;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin: 0 0 .5rem 0;
+  font-weight: 600;
+  color: #0f172a;
+}
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin: 2.5rem 0 .75rem 0;
+  font-weight: 600;
+  color: #0f172a;
+  scroll-margin-top: 64px;
+}
+h3 {
+  font-size: 1rem;
+  margin: 1.5rem 0 .5rem 0;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+p {
+  margin: .5rem 0 1rem 0;
+  font-size: .95rem;
+  color: #1a1a1a;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+ul {
+  margin-top: .25rem;
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+  font-size: .95rem;
+}
+li {
+  margin-bottom: .4rem;
+  font-size: .95rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+small {
+  font-size: .8rem;
+  color: #4b5563;
+  line-height: 1.4;
+  text-align: justify;
+  text-justify: inter-word;
+  display: block;
+}
+
+a {
+  color: #0369a1;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+  margin: 2rem 0;
+  clear: both;
+}
+
+/* Header / nav */
+
+/* 假设这些变量已在 :root 中定义 */
+:root {
+  --header-bg: #1a2233; /* 示例颜色 */
+  --header-text: #f8fafc; /* 示例颜色 */
+  --header-border: #333f54; /* 示例颜色 */
+  --link-color: #9ecaff; /* 示例链接颜色（截图中偏蓝） */
+  --radius-pill: 99px;
+}
+
+/* ADD: Wrapper for main page content */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 80px 16px;
+}
+
+/* Header / nav */
+.site-header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  border-bottom: 1px solid var(--header-border);
+}
+
+.nav-row {
+  display: flex;
+  flex-wrap: wrap; /* 允许换行 */
+  align-items: center;
+  
+  /* MODIFIED: 从 1.25rem 0 改为 1.25rem 16px */
+  padding: 1.25rem 16px; 
+  
+  justify-content: space-between;
+  gap: 1.5rem; /* 增大元素间距 */
+
+  /* ADD: 约束 header 内部内容 */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 左侧品牌信息 */
+.site-identity {
+  /* 允许其内部元素堆叠 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* 品牌名、sub、links 之间的小间距 */
+}
+
+.brand {
+  font-size: 1.25rem; /* 优化：增大品牌名字体 */
+  font-weight: 600;
+  color: var(--header-text);
+  text-decoration: none;
+  line-height: 1.2;
+  display: block; /* 优化：使其成为块级元素，不再需要 <br> */
+}
+
+.brand-sub {
+  font-size: .8rem; /* 优化：增大字体，提高可读性 */
+  font-weight: 400;
+  color: rgba(248, 250, 252, .6);
+  line-height: 1.2;
+}
+
+/* 新增：处理内联链接 */
+.links-inline {
+  font-size: .8rem;
+}
+
+.links-inline a {
+  color: var(--link-color); /* 优化：使用截图中显示的链接颜色 */
+  text-decoration: none;
+}
+
+.links-inline a:hover {
+  text-decoration: underline;
+}
+
+/* 优化：使用 CSS 添加分隔符 */
+.links-inline a + a::before {
+  content: "·";
+  color: rgba(248, 250, 252, .6); /* 分隔符颜色与 sub 保持一致 */
+  margin: 0 0.5em; /* 在分隔符两侧添加空间 */
+}
+
+
+/* 右侧导航 */
+.site-nav {
+  /* 当 flex-wrap 换行时，确保导航有一定空间 */
+  margin-top: 0.5rem;
+}
+
+.site-nav a {
+  font-size: 1.1rem;
+  color: var(--header-text);
+  text-decoration: none;
+  padding: .4rem .6rem;
+  border-radius: var(--radius-pill);
+  display: inline-block;
+  white-space: nowrap; /* 确保 "Publications" 等不会换行 */
+}
+
+.site-nav a:hover {
+  background-color: rgba(255, 255, 255, .08);
+}
+
+
+/* 优化：添加响应式处理 */
+@media (max-width: 768px) {
+  .nav-row {
+    flex-direction: column; /* 垂直堆叠 */
+    align-items: flex-start; /* 左对齐 */
+    padding: 1rem 0; /* 调整 padding */
+    gap: 1rem;
+  }
+
+  .site-identity {
+    /* 在小屏幕上，品牌信息内部也居中或左对齐 */
+    align-items: flex-start; /* 或者 'center' */
+    text-align: left; /* 或者 'center' */
+    width: 100%;
+  }
+
+  .site-nav {
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: left; /* 或者 'center' */
+  }
+
+  .site-nav a {
+    /* 微调导航项的 padding */
+    padding: .4rem .4rem .4rem 0;
+  }
+
+  /* 在小屏幕上，链接可能需要换行 */
+  .links-inline {
+    word-break: break-all;
+  }
+}
+
+
+/* ========== Intro Block (Home Page) ========== */
+
+.intro-block::after {
+  /* 这是一个“清除浮动”的现代方法，防止下方的 <hr> 跑到文字右边 */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.intro-photo {
+
+  float: left; 
+  width: 220px; 
+  margin-right: 24px; 
+  margin-bottom: 10px;
+}
+
+.intro-photo img {
+  width: 100%; 
+  height: 100%; 
+  display: block;
+  border: 1px solid #d1d5db; /* (我加了个边框，和 pub-thumb 统一) */
+  border-radius: 4px;       /* (我加了个圆角) */
+}
+
+.intro-name {
+  font-size: .9rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-align: center;
+  margin-top: .5rem;
+  line-height: 1.4;
+}
+
+/* footer note */
+
+.footer-note {
+  margin-top: 3rem;
+  font-size: .8rem;
+  color: #94a3b8;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* legacy classes */
+
+.header-block { display: none; }
+.header-photo { display: none; }
+.header-photo img { display: none; }
+.meta-line {
+  font-size: .9rem;
+  color: #4b5563;
+  line-height: 1.4;
+  margin-bottom: .5rem;
+}
+.badge-links a {
+  display: inline-block;
+  margin-right: .75rem;
+  margin-bottom: .5rem;
+  font-size: .8rem;
+  font-weight: 500;
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  border-radius: .5rem;
+  padding: .3rem .5rem;
+  text-decoration: none;
+}
+.badge-links a:hover {
+  background: #e2e8f0;
+  text-decoration: none;
+}
+
+/* ========== Publications / Systems page layout ========== */
+
+.pub-top-links {
+  font-size: .8rem;
+  line-height: 1.4;
+  color: #475569;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.pub-top-links button {
+  display: inline-block;
+  margin: 0 .5rem .5rem 0;
+  padding: .3rem .5rem;
+  border-radius: .4rem;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  font-weight: 500;
+  color: #0369a1;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: .8rem;
+  cursor: pointer;
+}
+.pub-top-links button:hover {
+  background: #e2e8f0;
+  text-decoration: none;
+}
+.pub-top-links button.active {
+  background: #0369a1;
+  color: #fff;
+  border-color: #0369a1;
+}
+
+.pub-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 2rem 0 .75rem 0;
+  line-height: 1.3;
+  text-align: left;
+}
+
+
+.pub-intro-blurb {
+  font-size: .9rem;
+  line-height: 1.5;
+  color: #4b5563;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.pub-entry {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1.2rem 0 1.5rem 0;
+  font-size: .9rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+.pub-left {
+  flex: 0 0 260px;
+  max-width: 100%;
+}
+
+.pub-thumb {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: #f8fafc;
+}
+
+.pub-right {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+.pub-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.pub-authors {
+  font-size: .95rem;
+  color: #374151;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.pub-authors u {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.pub-venue {
+  font-size: .9rem;
+  color: #6b7280;
+  line-height: 1.4;
+  margin: 0;
+  font-style: italic;
+}
+
+.pub-links {
+  font-size: .9rem;
+  color: #475569;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.pub-links a {
+  color: #0369a1;
+  font-weight: 500;
+  margin-right: .8rem;
+  text-decoration: none;
+}
+
+.pub-links a:hover {
+  text-decoration: underline;
+}
+
+.pub-entry.hidden {
+  display: none;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .pub-left {
+    flex: 0 0 200px;
+    max-width: 200px;
+  }
+  
+  .pub-thumb {
+    width: 200px;
+    height: 120px;
+  }
+  
+  .pub-right {
+    min-height: 120px;
+  }
+}
+
+/* ========== People page layout (current members grid + alumni list) ========== */
+
+.section-block {
+  margin-bottom: 2rem;
+}
+
+.group-intro {
+  font-size: .8rem;
+  color: #4b5563;
+  line-height: 1.5;
+  max-width: 780px;
+  margin-top: .5rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.person-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 32px;
+  margin-top: 1rem;
+}
+
+.person-card {
+  width: 140px;
+  text-align: center;
+  font-size: .8rem;
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+.person-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  background: #f8fafc;
+  margin-bottom: .5rem;
+}
+.person-name {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: .8rem;
+  line-height: 1.4;
+  margin-bottom: .25rem;
+  text-align: center;
+}
+.person-role {
+  font-size: .75rem;
+  color: #4b5563;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.alumni-block {
+  margin-top: 1rem;
+  font-size: .8rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+  max-width: 780px;
+}
+
+.alumni-list {
+  list-style: none;
+  padding-left: 0;
+  margin: .75rem 0 0 0;
+  font-size: .8rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+  /* border-left removed */
+  /* padding-left removed */
+}
+
+.alumni-list li {
+  margin-bottom: .6rem;
+  color: #374151;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.alumni-name {
+  font-weight: 600;
+  color: #0f172a;
+  margin-right: .4rem;
+  white-space: nowrap;
+}
+
+.alumni-meta {
+  color: #4b5563;
+  font-size: .75rem;
+  line-height: 1.4;
+  display: block;
+  margin-top: .15rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* responsive tweaks */
+@media (max-width:560px){
+  .pub-entry {
+    flex-wrap: wrap;
+  }
+  .pub-left {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .pub-thumb {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+  }
+
+  .person-card {
+    width: 120px;
+  }
+  .person-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .top-header {
+    font-size: .85rem;
+  }
+  .header-row1 {
+    font-size: .9rem;
+  }
+  .header-row2 {
+    font-size: .75rem;
+    gap: .5rem;
+  }
+}
+
+@media (max-width:480px){
+  h1 { font-size: 1.35rem; }
+  h2 { font-size: 1.15rem; }
+}
+
+
+/* 调整人员卡片图片尺寸 */
+.person-card img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;  /* 保持图片比例并裁剪 */
+  object-position: center;  /* 居中显示 */
+}
+
+/* 如果需要调整整个卡片的宽度以适应图片 */
+.person-card {
+  width: 150px;  /* 可选：让卡片宽度与图片一致 */
+}
+
+
+.alumni-block {
+  margin-top: 1rem;
+  max-width: 1000px;  /* 控制整个校友区块的最大宽度 */
+  width: 100%;       /* 可选：在小屏幕上自适应 */
+}
+
+.alumni-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alumni-list li {
+  display: grid;
+  grid-template-columns: 1px 1fr;
+  gap: 400px;
+  padding: 3px 0;
+  font-size: 16px;
+  height: 8px;
+}
+
+.alumni-name {
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.alumni-info {
+  color: #666;
+}
